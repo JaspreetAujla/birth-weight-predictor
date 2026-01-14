@@ -6,6 +6,10 @@ app = Flask(__name__)
 API_KEY = "0883e6daf4424c098b2909af062f9dfe"
 url = "https://newsapi.org/v2/everything?q=tesla&from=2025-11-30&sortBy=publishedAt&apiKey=0883e6daf4424c098b2909af062f9dfe"
 
+@app.route('/')
+def home():
+    return "API is running successfully "
+
 @app.route('/api/news', methods=['GET'])
 def get_news():
     
